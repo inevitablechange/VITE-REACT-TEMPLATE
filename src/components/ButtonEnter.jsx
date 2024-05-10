@@ -1,23 +1,23 @@
 import Button from "./Button";
 
-const ButtonEnter = ({ name, operator, result, setResult, temp, setTemp }) => {
+const ButtonEnter = ({ name, operator, setResult, result, temp, setTemp }) => {
   const onClickButton = () => {
     switch (operator) {
       case "+":
-        setTemp(+temp + +result + "");
-        setResult(+temp + +result + "");
+        setTemp(+temp + +result);
+        setResult(+temp + +result);
         break;
       case "-":
-        setTemp(+temp - +result + "");
-        setResult(+temp - +result) + "";
+        setTemp(+temp - +result);
+        setResult(+temp - +result);
         break;
       case "*":
-        setTemp(+temp * +result + "");
-        setResult(+temp * +result + "");
+        setTemp(+temp * +result);
+        setResult(+temp * +result);
         break;
       case "/":
-        setTemp(parseInt(+temp / +result, 10) + "");
-        setResult(parseInt(+temp / +result, 10) + "");
+        setTemp(+temp / +result);
+        setResult(+temp / +result);
         break;
       default:
         alert("잘못된 연산자입니다.");
